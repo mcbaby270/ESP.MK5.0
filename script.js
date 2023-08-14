@@ -1,3 +1,5 @@
+import firebase from 'firebase/app';
+import 'firebase/database';
 document.addEventListener("DOMContentLoaded", () => {
     const feedNowButton = document.getElementById("feedNowButton");
     const feedTimeInput = document.getElementById("feedTime");
