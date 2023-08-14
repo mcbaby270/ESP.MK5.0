@@ -1,3 +1,6 @@
+// Import the necessary Firebase modules
+import firebase from 'firebase/app';   // Import the core Firebase module
+import 'firebase/database';            // Import the Firebase Realtime Database module
 // Initialize Firebase
 // For Firebase JS SDK v7.20.0 and later, measurementId is optional
 const firebaseConfig = {
