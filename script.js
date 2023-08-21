@@ -1,5 +1,13 @@
 import firebase from 'firebase/app';
 import 'firebase/database';
+import firebaseConfig from './firebase-config.js'; // Import the Firebase configuration
+
+// Initialize Firebase app
+firebase.initializeApp(firebaseConfig);
+
+// Get a reference to the Firebase Realtime Database
+const database = firebase.database();
+
 document.addEventListener("DOMContentLoaded", () => {
     const feedNowButton = document.getElementById("feedNowButton");
     const feedTimeInput = document.getElementById("feedTime");
@@ -32,5 +40,4 @@ document.addEventListener("DOMContentLoaded", () => {
         time: time
       });
     }
-  });
-  
+});
