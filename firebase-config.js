@@ -1,5 +1,5 @@
-import firebase from 'firebase/app';   // Import the core Firebase module
-import 'firebase/database';            // Import the Firebase Realtime Database module
+import { initializeApp } from 'firebase/app';
+import { getDatabase } from 'firebase/database';
 
 const firebaseConfig = {
   apiKey: "AIzaSyCq-IaAC5_aCEaQ950gkBgEpbHj_4hUVzI",
