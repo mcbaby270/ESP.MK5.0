@@ -1,6 +1,6 @@
 import firebase from 'firebase/app';
 import 'firebase/database';
-import { firebaseConfig } from './firebase-config.js'; // Import the firebaseConfig object, not default
+import { firebaseConfig } from './firebase-config.js';
 
 firebase.initializeApp(firebaseConfig);
 const database = firebase.database();
@@ -15,6 +15,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
   function feedNow() {
     // Implement your feedNow logic here
+    console.log("Feed Now clicked");
   }
 
   function scheduleFeeding() {
@@ -22,6 +23,7 @@ document.addEventListener("DOMContentLoaded", () => {
     if (selectedTime) {
       const scheduledRef = database.ref("feedings").push();
       scheduledRef.set({ time: selectedTime });
+      console.log("Scheduled feeding:", selectedTime);
     }
   }
 });
