@@ -1,6 +1,6 @@
 import firebase from 'firebase/app';
 import 'firebase/database';
-import firebaseConfig from './firebase-config.js';
+import { firebaseConfig } from './firebase-config.js'; // Import the firebaseConfig object, not default
 
 firebase.initializeApp(firebaseConfig);
 const database = firebase.database();
@@ -25,8 +25,3 @@ document.addEventListener("DOMContentLoaded", () => {
     }
   }
 });
-const firebaseConfig = { ... };
-firebase.initializeApp(firebaseConfig);
-const database = firebase.database();
-export default firebaseConfig;
-
