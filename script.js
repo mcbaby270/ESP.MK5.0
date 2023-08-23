@@ -25,3 +25,8 @@ document.addEventListener("DOMContentLoaded", () => {
     }
   }
 });
+const firebaseConfig = { ... };
+firebase.initializeApp(firebaseConfig);
+const database = firebase.database();
+export default firebaseConfig;
+
