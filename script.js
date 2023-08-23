@@ -1,9 +1,6 @@
 import { initializeApp } from 'firebase/app';
 import { getDatabase, ref, push, set } from 'firebase/database';
-import { firebaseConfig } from './firebase-config.js';
-
-const app = initializeApp(firebaseConfig);
-const database = getDatabase(app);
+import { app, database } from './firebase-config.js'; // Add this line
 
 document.addEventListener("DOMContentLoaded", () => {
   const feedNowButton = document.getElementById("feedNowButton");
