@@ -1,7 +1,7 @@
 import { initializeApp } from 'firebase/app';
 import { getDatabase } from 'firebase/database';
 
-const firebaseConfig = {
+export const firebaseConfig = {
   apiKey: "AIzaSyCq-IaAC5_aCEaQ950gkBgEpbHj_4hUVzI",
   authDomain: "aquafeeder-a9d68.firebaseapp.com",
   databaseURL: "https://aquafeeder-a9d68-default-rtdb.firebaseio.com",
