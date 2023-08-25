@@ -1,5 +1,9 @@
-// Initialize Firebase
-var firebaseConfig = {
+// firebase-config.js
+import { initializeApp } from 'firebase/app';
+import { getDatabase } from 'firebase/database';
+
+// Your Firebase configuration object
+const firebaseConfig = {
     apiKey: "AIzaSyCq-IaAC5_aCEaQ950gkBgEpbHj_4hUVzI",
     authDomain: "aquafeeder-a9d68.firebaseapp.com",
     databaseURL: "https://aquafeeder-a9d68-default-rtdb.firebaseio.com",
@@ -8,7 +12,10 @@ var firebaseConfig = {
     messagingSenderId: "387880372575",
     appId: "1:387880372575:web:6858ba479ae87902e18eea",
     measurementId: "G-J1E31CNE67"
-  };
-  // Initialize Firebase
-  firebase.initializeApp(firebaseConfig);
-  
+};
+
+const app = initializeApp(firebaseConfig);
+const database = getDatabase(app);
+
+export { app, database };
+
