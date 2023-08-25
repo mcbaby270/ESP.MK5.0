@@ -1,6 +1,9 @@
-import { initializeApp } from 'firebase/app';
-import { getDatabase, ref, push, set } from 'firebase/database';
-import { app, database } from './firebase-config.js'; // Add this line
+
+import firebase from 'firebase/app';
+import 'firebase/database'; // Import the Firebase Realtime Database module
+import { firebaseConfig, database } from './firebase-config.js';
+
+firebase.initializeApp(firebaseConfig);
 
 document.addEventListener("DOMContentLoaded", () => {
   const feedNowButton = document.getElementById("feedNowButton");
@@ -18,8 +21,8 @@ document.addEventListener("DOMContentLoaded", () => {
   function scheduleFeeding() {
     const selectedTime = feedTimeInput.value;
     if (selectedTime) {
-      const scheduledRef = push(ref(database, "feedings"));
-      set(scheduledRef, { time: selectedTime });
+      const scheduledRef = database.ref("feedings").push();
+      scheduledRef.set({ time: selectedTime });
       console.log("Scheduled feeding:", selectedTime);
     }
   }
